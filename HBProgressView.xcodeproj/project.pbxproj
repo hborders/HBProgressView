@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B5702FE14639592006ED55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5702FD14639592006ED55A /* UIKit.framework */; };
+		7B57030014639592006ED55A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5702FF14639592006ED55A /* Foundation.framework */; };
+		7B57030214639592006ED55A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B57030114639592006ED55A /* CoreGraphics.framework */; };
+		7B57030814639592006ED55A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B57030614639592006ED55A /* InfoPlist.strings */; };
+		7B57030A14639592006ED55A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B57030914639592006ED55A /* main.m */; };
+		7B57030E14639592006ED55A /* HBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B57030D14639592006ED55A /* HBAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B5702F914639592006ED55A /* HBProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5702FD14639592006ED55A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B5702FF14639592006ED55A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B57030114639592006ED55A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B57030514639592006ED55A /* HBProgressView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBProgressView-Info.plist"; sourceTree = "<group>"; };
+		7B57030714639592006ED55A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B57030914639592006ED55A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B57030B14639592006ED55A /* HBProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBProgressView-Prefix.pch"; sourceTree = "<group>"; };
+		7B57030C14639592006ED55A /* HBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBAppDelegate.h; sourceTree = "<group>"; };
+		7B57030D14639592006ED55A /* HBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B5702F614639592006ED55A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5702FE14639592006ED55A /* UIKit.framework in Frameworks */,
+				7B57030014639592006ED55A /* Foundation.framework in Frameworks */,
+				7B57030214639592006ED55A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B5702EE14639592006ED55A = {
+			isa = PBXGroup;
+			children = (
+				7B57030314639592006ED55A /* HBProgressView */,
+				7B5702FC14639592006ED55A /* Frameworks */,
+				7B5702FA14639592006ED55A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B5702FA14639592006ED55A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B5702F914639592006ED55A /* HBProgressView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B5702FC14639592006ED55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B5702FD14639592006ED55A /* UIKit.framework */,
+				7B5702FF14639592006ED55A /* Foundation.framework */,
+				7B57030114639592006ED55A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B57030314639592006ED55A /* HBProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				7B57030C14639592006ED55A /* HBAppDelegate.h */,
+				7B57030D14639592006ED55A /* HBAppDelegate.m */,
+				7B57030414639592006ED55A /* Supporting Files */,
+			);
+			path = HBProgressView;
+			sourceTree = "<group>";
+		};
+		7B57030414639592006ED55A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B57030514639592006ED55A /* HBProgressView-Info.plist */,
+				7B57030614639592006ED55A /* InfoPlist.strings */,
+				7B57030914639592006ED55A /* main.m */,
+				7B57030B14639592006ED55A /* HBProgressView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B5702F814639592006ED55A /* HBProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B57031114639592006ED55A /* Build configuration list for PBXNativeTarget "HBProgressView" */;
+			buildPhases = (
+				7B5702F514639592006ED55A /* Sources */,
+				7B5702F614639592006ED55A /* Frameworks */,
+				7B5702F714639592006ED55A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HBProgressView;
+			productName = HBProgressView;
+			productReference = 7B5702F914639592006ED55A /* HBProgressView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B5702F014639592006ED55A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7B5702F314639592006ED55A /* Build configuration list for PBXProject "HBProgressView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7B5702EE14639592006ED55A;
+			productRefGroup = 7B5702FA14639592006ED55A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B5702F814639592006ED55A /* HBProgressView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B5702F714639592006ED55A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B57030814639592006ED55A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B5702F514639592006ED55A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B57030A14639592006ED55A /* main.m in Sources */,
+				7B57030E14639592006ED55A /* HBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7B57030614639592006ED55A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B57030714639592006ED55A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B57030F14639592006ED55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B57031014639592006ED55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B57031214639592006ED55A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBProgressView/HBProgressView-Prefix.pch";
+				INFOPLIST_FILE = "HBProgressView/HBProgressView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B57031314639592006ED55A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HBProgressView/HBProgressView-Prefix.pch";
+				INFOPLIST_FILE = "HBProgressView/HBProgressView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B5702F314639592006ED55A /* Build configuration list for PBXProject "HBProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B57030F14639592006ED55A /* Debug */,
+				7B57031014639592006ED55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B57031114639592006ED55A /* Build configuration list for PBXNativeTarget "HBProgressView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B57031214639592006ED55A /* Debug */,
+				7B57031314639592006ED55A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B5702F014639592006ED55A /* Project object */;
+}
