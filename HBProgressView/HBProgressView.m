@@ -60,11 +60,21 @@
     self.maskShapeLayer.frame = self.layer.bounds;
     self.maskShapeLayer.path = maskBezierPath.CGPath;
     
-    UIBezierPath *completionBezierPath = [maskBezierPath copy];
-    [completionBezierPath applyTransform:CGAffineTransformMakeTranslation((1 - self.completionFactor) * -CGRectGetWidth(self.layer.bounds),
-                                                                          1)];
+    
     self.completionShapeLayer.frame = self.layer.bounds;
-    self.completionShapeLayer.path = completionBezierPath.CGPath;
+    
+    if (self.completionFactor == 0) {
+        self.completionShapeLayer.path = NULL;
+    } else {        
+        UIBezierPath *completionBezierPath = [maskBezierPath copy];
+        if (self.completionFactor == 1) {
+            self.completionShapeLayer.path = completionBezierPath.CGPath;
+        } else {
+            [completionBezierPath applyTransform:CGAffineTransformMakeTranslation((1 - self.completionFactor) * -CGRectGetWidth(self.layer.bounds),
+                                                                                  1)];
+            self.completionShapeLayer.path = completionBezierPath.CGPath;
+        }
+    }
 }
 
 #pragma mark - public API
