@@ -116,7 +116,7 @@
 		7B5702F014639592006ED55A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 7B5702F314639592006ED55A /* Build configuration list for PBXProject "HBProgressView" */;
 			compatibilityVersion = "Xcode 3.2";
