@@ -48,6 +48,10 @@
         self.shadowShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
         self.shadowShapeLayer.fillColor = [UIColor purpleColor].CGColor;
         self.shadowShapeLayer.fillRule = kCAFillRuleEvenOdd;
+        self.shadowShapeLayer.shadowColor = [UIColor blackColor].CGColor;
+        self.shadowShapeLayer.shadowOffset = CGSizeMake(0, 2);
+        self.shadowShapeLayer.shadowOpacity = .5;
+        self.shadowShapeLayer.shadowRadius = 5;
         [self.layer addSublayer:self.shadowShapeLayer];
     }
     
