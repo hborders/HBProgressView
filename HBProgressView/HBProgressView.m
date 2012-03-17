@@ -39,8 +39,7 @@
 - (void) layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat cornerRadius = MIN(CGRectGetWidth(self.layer.bounds),
-                               CGRectGetHeight(self.layer.bounds));
+    CGFloat cornerRadius = CGRectGetHeight(self.layer.bounds);
     UIBezierPath *totalBezierPath = [UIBezierPath bezierPathWithRoundedRect:self.layer.bounds
                                                           byRoundingCorners:UIRectCornerAllCorners
                                                                 cornerRadii:CGSizeMake(cornerRadius, 
