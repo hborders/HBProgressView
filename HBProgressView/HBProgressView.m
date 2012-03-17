@@ -33,6 +33,7 @@
         self.totalShapeLayer = [[CAShapeLayer alloc] init];
         self.totalShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
         self.totalShapeLayer.fillColor = [UIColor blueColor].CGColor;
+        self.totalShapeLayer.masksToBounds = YES;
         [self.layer addSublayer:self.totalShapeLayer];
         
         self.completionShapeLayer = [[CAShapeLayer alloc] init];
