@@ -10,4 +10,6 @@
 
 @interface HBProgressView : UIView
 
+@property (nonatomic) CGFloat completionFactor;
+
 @end

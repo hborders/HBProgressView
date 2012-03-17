@@ -12,12 +12,16 @@
 @interface HBProgressView()
 
 @property (nonatomic, strong) CAShapeLayer *totalShapeLayer;
+@property (nonatomic, strong) CAShapeLayer *completionShapeLayer;
 
 @end
 
 @implementation HBProgressView
 
+@synthesize completionFactor = _completionFactor;
+
 @synthesize totalShapeLayer = _totalShapeLayer;
+@synthesize completionShapeLayer = _completionShapeLayer;
 
 #pragma init
 
@@ -25,10 +29,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        
         self.totalShapeLayer = [[CAShapeLayer alloc] init];
         self.totalShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
         self.totalShapeLayer.fillColor = [UIColor blueColor].CGColor;
         [self.layer addSublayer:self.totalShapeLayer];
+        
+        self.completionShapeLayer = [[CAShapeLayer alloc] init];
+        self.completionShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
+        self.completionShapeLayer.fillColor = [UIColor redColor].CGColor;
+        [self.totalShapeLayer addSublayer:self.completionShapeLayer];
     }
     
     return self;
@@ -47,6 +57,22 @@
     
     self.totalShapeLayer.frame = self.layer.bounds;
     self.totalShapeLayer.path = totalBezierPath.CGPath;
+    
+    UIBezierPath *completionBezierPath = [totalBezierPath copy];
+    [completionBezierPath applyTransform:CGAffineTransformMakeTranslation((1 - self.completionFactor) * -CGRectGetWidth(self.totalShapeLayer.bounds),
+                                                                          1)];
+    self.completionShapeLayer.frame = self.totalShapeLayer.bounds;
+    self.completionShapeLayer.path = completionBezierPath.CGPath;
+}
+
+#pragma mark - public API
+
+- (void) setCompletionFactor:(CGFloat)completionFactor {
+    if (_completionFactor != completionFactor) {
+        _completionFactor = completionFactor;
+        
+        [self setNeedsLayout];
+    }
 }
 
 @end
