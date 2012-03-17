@@ -7,6 +7,7 @@
 //
 
 #import "HBAppDelegate.h"
+#import "HBTestViewController.h"
 
 @implementation HBAppDelegate
 
@@ -15,6 +16,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = [[HBTestViewController alloc] init];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

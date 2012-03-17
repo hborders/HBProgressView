@@ -13,6 +13,9 @@
 		7B57030814639592006ED55A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B57030614639592006ED55A /* InfoPlist.strings */; };
 		7B57030A14639592006ED55A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B57030914639592006ED55A /* main.m */; };
 		7B57030E14639592006ED55A /* HBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B57030D14639592006ED55A /* HBAppDelegate.m */; };
+		7B57031B14639792006ED55A /* HBProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B57031A14639792006ED55A /* HBProgressView.m */; };
+		7B57031E146398D8006ED55A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B57031C146398BF006ED55A /* QuartzCore.framework */; };
+		7B6FF5F81514349B00EB2D4D /* HBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6FF5F71514349B00EB2D4D /* HBTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		7B57030B14639592006ED55A /* HBProgressView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HBProgressView-Prefix.pch"; sourceTree = "<group>"; };
 		7B57030C14639592006ED55A /* HBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBAppDelegate.h; sourceTree = "<group>"; };
 		7B57030D14639592006ED55A /* HBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBAppDelegate.m; sourceTree = "<group>"; };
+		7B57031914639792006ED55A /* HBProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBProgressView.h; sourceTree = "<group>"; };
+		7B57031A14639792006ED55A /* HBProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBProgressView.m; sourceTree = "<group>"; };
+		7B57031C146398BF006ED55A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7B6FF5F61514349B00EB2D4D /* HBTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTestViewController.h; sourceTree = "<group>"; };
+		7B6FF5F71514349B00EB2D4D /* HBTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 				7B5702FE14639592006ED55A /* UIKit.framework in Frameworks */,
 				7B57030014639592006ED55A /* Foundation.framework in Frameworks */,
 				7B57030214639592006ED55A /* CoreGraphics.framework in Frameworks */,
+				7B57031E146398D8006ED55A /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 		7B5702FC14639592006ED55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B57031C146398BF006ED55A /* QuartzCore.framework */,
 				7B5702FD14639592006ED55A /* UIKit.framework */,
 				7B5702FF14639592006ED55A /* Foundation.framework */,
 				7B57030114639592006ED55A /* CoreGraphics.framework */,
@@ -72,9 +82,9 @@
 		7B57030314639592006ED55A /* HBProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				7B57030C14639592006ED55A /* HBAppDelegate.h */,
-				7B57030D14639592006ED55A /* HBAppDelegate.m */,
 				7B57030414639592006ED55A /* Supporting Files */,
+				7B57031914639792006ED55A /* HBProgressView.h */,
+				7B57031A14639792006ED55A /* HBProgressView.m */,
 			);
 			path = HBProgressView;
 			sourceTree = "<group>";
@@ -82,10 +92,14 @@
 		7B57030414639592006ED55A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B57030C14639592006ED55A /* HBAppDelegate.h */,
+				7B57030D14639592006ED55A /* HBAppDelegate.m */,
 				7B57030514639592006ED55A /* HBProgressView-Info.plist */,
 				7B57030614639592006ED55A /* InfoPlist.strings */,
 				7B57030914639592006ED55A /* main.m */,
 				7B57030B14639592006ED55A /* HBProgressView-Prefix.pch */,
+				7B6FF5F61514349B00EB2D4D /* HBTestViewController.h */,
+				7B6FF5F71514349B00EB2D4D /* HBTestViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,6 +167,8 @@
 			files = (
 				7B57030A14639592006ED55A /* main.m in Sources */,
 				7B57030E14639592006ED55A /* HBAppDelegate.m in Sources */,
+				7B57031B14639792006ED55A /* HBProgressView.m in Sources */,
+				7B6FF5F81514349B00EB2D4D /* HBTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +274,7 @@
 				7B57031314639592006ED55A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
