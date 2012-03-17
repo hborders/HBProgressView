@@ -89,7 +89,26 @@
     
     CGRect shadowShapeLayerFrame = CGRectInset(self.layer.bounds, -1, -1);
     UIBezierPath *shadowShapeLayerBezierPath = [UIBezierPath bezierPathWithRect:shadowShapeLayerFrame];    
-    [shadowShapeLayerBezierPath appendPath:maskBezierPath];
+
+    CGAffineTransform reverseDirectionAffineTransform =
+        CGAffineTransformMakeTranslation(-CGRectGetMidX(self.layer.bounds), 
+                                         -CGRectGetMidY(self.layer.bounds));
+    reverseDirectionAffineTransform = CGAffineTransformScale(reverseDirectionAffineTransform, 
+                                                             -1, 
+                                                             1);
+    reverseDirectionAffineTransform = CGAffineTransformTranslate(reverseDirectionAffineTransform, 
+                                                                 CGRectGetMidX(self.layer.bounds), 
+                                                                 CGRectGetMidY(self.layer.bounds));    
+    
+    UIBezierPath *shadowShapeLayerInnerBezierPath = [maskBezierPath copy];
+    [shadowShapeLayerInnerBezierPath applyTransform:CGAffineTransformMakeTranslation(-CGRectGetMidX(self.layer.bounds), 
+                                                                                     -CGRectGetMidY(self.layer.bounds))];
+    [shadowShapeLayerInnerBezierPath applyTransform:CGAffineTransformMakeScale(-1, 
+                                                                               1)];
+    [shadowShapeLayerInnerBezierPath applyTransform:CGAffineTransformMakeTranslation(CGRectGetMidX(self.layer.bounds), 
+                                                                                     CGRectGetMidY(self.layer.bounds))];
+    
+    [shadowShapeLayerBezierPath appendPath:shadowShapeLayerInnerBezierPath];
     
     self.shadowShapeLayer.frame = shadowShapeLayerFrame;
     self.shadowShapeLayer.path = shadowShapeLayerBezierPath.CGPath;
