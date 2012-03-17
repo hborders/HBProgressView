@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) CAShapeLayer *maskShapeLayer;
 @property (nonatomic, strong) CAShapeLayer *completionShapeLayer;
+@property (nonatomic, strong) CAShapeLayer *shadowShapeLayer;
 
 @end
 
@@ -22,6 +23,7 @@
 
 @synthesize maskShapeLayer = _maskShapeLayer;
 @synthesize completionShapeLayer = _completionShapeLayer;
+@synthesize shadowShapeLayer = _shadowShapeLayer;
 
 #pragma init
 
@@ -41,6 +43,12 @@
         self.completionShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
         self.completionShapeLayer.fillColor = [UIColor redColor].CGColor;
         [self.layer addSublayer:self.completionShapeLayer];
+        
+        self.shadowShapeLayer = [[CAShapeLayer alloc] init];
+        self.shadowShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
+        self.shadowShapeLayer.fillColor = [UIColor purpleColor].CGColor;
+        self.shadowShapeLayer.fillRule = kCAFillRuleEvenOdd;
+        [self.layer addSublayer:self.shadowShapeLayer];
     }
     
     return self;
@@ -60,7 +68,6 @@
     self.maskShapeLayer.frame = self.layer.bounds;
     self.maskShapeLayer.path = maskBezierPath.CGPath;
     
-    
     self.completionShapeLayer.frame = self.layer.bounds;
     
     if (self.completionFactor == 0) {
@@ -75,6 +82,13 @@
             self.completionShapeLayer.path = completionBezierPath.CGPath;
         }
     }
+    
+    CGRect shadowShapeLayerFrame = CGRectInset(self.layer.bounds, -1, -1);
+    UIBezierPath *shadowShapeLayerBezierPath = [UIBezierPath bezierPathWithRect:shadowShapeLayerFrame];    
+    [shadowShapeLayerBezierPath appendPath:maskBezierPath];
+    
+    self.shadowShapeLayer.frame = shadowShapeLayerFrame;
+    self.shadowShapeLayer.path = shadowShapeLayerBezierPath.CGPath;
 }
 
 #pragma mark - public API
