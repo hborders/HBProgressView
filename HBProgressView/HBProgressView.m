@@ -34,10 +34,10 @@
         
         self.layer.backgroundColor = [UIColor blueColor].CGColor;
         
-        self.maskShapeLayer = [[CAShapeLayer alloc] init];
-        self.maskShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
-        self.maskShapeLayer.fillColor = [UIColor blackColor].CGColor;
-        self.layer.mask = self.maskShapeLayer;
+//        self.maskShapeLayer = [[CAShapeLayer alloc] init];
+//        self.maskShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
+//        self.maskShapeLayer.fillColor = [UIColor blackColor].CGColor;
+//        self.layer.mask = self.maskShapeLayer;
         
         self.completionShapeLayer = [[CAShapeLayer alloc] init];
         self.completionShapeLayer.backgroundColor = [UIColor clearColor].CGColor;
