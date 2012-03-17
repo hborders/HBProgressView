@@ -92,7 +92,7 @@
     [shadowShapeLayerBezierPath appendPath:maskBezierPath];
     
     self.shadowShapeLayer.frame = shadowShapeLayerFrame;
-    self.shadowShapeLayer.shadowPath = shadowShapeLayerBezierPath.CGPath;
+    self.shadowShapeLayer.path = shadowShapeLayerBezierPath.CGPath;
 }
 
 #pragma mark - public API
